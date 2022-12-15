@@ -214,6 +214,8 @@ The dashboard is rather simple:
 
 It captures only the first day of measurement, so the per month values are not real yet.
 
+The dashboard can be downloaded from [Electricity.json](/Electricity.json).
+
 ## Usage
 
 There needs to be a `secrets.py` file that contains Wi-Fi credentials and information about the MQTT broker.
