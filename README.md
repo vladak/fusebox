@@ -67,7 +67,7 @@ called the teacher responsible for the workshop, and I had the box ready in 2 da
 <img src="img/box-outside.JPG" alt="drawing" width="400"/>
 
 To fasten the microcontroller inside the case, I used the [nylon screw and stand-off set](https://www.adafruit.com/product/3299).
-I am glad that I ordered the screw set without having a firm plan what to use it for.
+I am glad that I ordered the screw set earlier without having a firm plan what to use it for.
 
 The nice thing about the case is that the Neopixel blinking (in blue, for half a second),
 which happens whenever a message is published to MQTT broker,
