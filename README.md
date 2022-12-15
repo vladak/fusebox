@@ -84,6 +84,7 @@ of the box for a bonus !).
 To get reliable pulse readings, a [pullup resistor](https://en.wikipedia.org/wiki/Pull-up_resistor) is needed.
 In order to connect all the wires and the resistor together I used the Wago connectors.
 I cut the leads to the resistor a bit so it almost completely hides inside the Wago connectors.
+The only soldering necessary was for the 3 wires attached to the Feather.
 
 The only struggle I had was powering the Feather. It turned out that both +V and -V outputs from the
 power supply have to be used. The +V connected to the USB input/output and -V connected to GND.
