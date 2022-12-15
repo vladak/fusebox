@@ -208,7 +208,11 @@ Under the `scrape_configs` section in `/etc/prometheus/prometheus.yml` there sho
 
 ## Grafana
 
-XXX
+The dashboard is rather simple:
+
+<img src="img/grafana-dashboard.jpg" alt="drawing" width="800"/>
+
+It captures only the first day of measurement, so the per month values are not real yet.
 
 ## Usage
 
