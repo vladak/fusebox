@@ -22,6 +22,7 @@ pigtail | [RP-SMA to w.FL / MHF3 / IPEX3 Adapter](https://www.adafruit.com/produ
 temperature/humidity sensor | [Adafruit AHT20 - Temperature & Humidity Sensor Breakout Board - STEMMA QT / Qwiic](https://www.adafruit.com/product/4566)
 power meter | [SDM 72D 0,25-100A MID](https://www.elektromery.com/product/trifazove-elektromery-na-listu-din-neove/elektromer-sdm-72d--0_25-100a-mid/177)
 5V power supply | [Meanwell HDR-15-5](https://www.meanwell.com/webapp/product/search.aspx?prod=HDR-15)
+resistor | 1k Ohm
 Wago connectors | 3 x [221-413](https://www.wago.com/global/installation-terminal-blocks-and-connectors/compact-splicing-connector/p/221-413)
 enclosure | [3D Printed Case for Adafruit Feather](https://learn.adafruit.com/3d-printed-case-for-adafruit-feather/parts) - solid lid, bottom with wings
 mounts | [nylon screw and stand-off set](https://www.adafruit.com/product/3299)
