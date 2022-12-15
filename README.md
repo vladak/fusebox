@@ -76,7 +76,7 @@ is visible through the lid of the enclosure (also blue color) as it is a bit tra
 ### Wiring
 
 The color coding I choose is based on the [STEMMA QT spec](https://learn.adafruit.com/introducing-adafruit-stemma-qt/technical-specs) -
-red for V+ power, black for ground. The pulse wire is blue (matching the color 
+red for V+ power, black for ground. The pulse wire connected to GPIO pin 37 (`board.D37` in the code) is blue (matching the color 
 of the box for a bonus !).
 
 <img src="img/box-inside.JPG" alt="drawing" width="400"/>
