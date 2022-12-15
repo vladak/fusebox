@@ -34,13 +34,14 @@ In the midst of the [energy crisis](https://en.wikipedia.org/wiki/2021%E2%80%932
 I wondered what the power consumption of our household looks like in detail,
 esp. with running a small [home lab](https://www.reddit.com/r/homelab/).
 
-I came across a web that completed [just that](https://www.berlinger.cz/blog/mereni-elektriny/).
+I came across a web that completed [just that](https://www.berlinger.cz/blog/mereni-elektriny/) using Arduino.
+Being a fan of Adafruit and CircuitPython, I wanted to replicate this with these.
 
 ### ESP32 V2 and WiFi
 
-Testing with [ESP32-S2](https://www.adafruit.com/product/5303) that has built-in antenna places inside the fuse box,
-I confirmed once again that there is some problem in the stack as some of the
-MQTT messages are lost.
+Testing with [ESP32-S2](https://www.adafruit.com/product/5303) that has built-in antenna placed inside the fuse box,
+revealed once again that there is some problem in the stack as some of the
+MQTT messages sent from the Feather to the MQTT broker are lost.
 
 From the last Adafruit order, I had the antenna pigtail, and I found a USB WiFi adapter
 that came with small 2 dBi antenna. Since the WiFi adapter cost like 5 EUR,
