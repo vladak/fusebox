@@ -115,6 +115,10 @@ to MQTT broker. Since it has to count the pulses, it would be undesirable to ent
 of hardware sleep that would prevent that. It is also not needed, given the microcontroller is connected to 5V
 power supply inside the fuse box.
 
+As for the pulse counting, it is made easy thanks to CircuitPython 
+[wrapping interrupts in the countio module](https://forums.adafruit.com/viewtopic.php?p=855334),
+which I believe happens on ESP32 V2.
+
 ## Software/firmware install
 
 Firstly, the microcontroller needs to be converted to run CircuitPython. To do that, for ESP32 V2, I chose the [command line `esptool`](https://learn.adafruit.com/circuitpython-with-esp32-quick-start/command-line-esptool) on a Linux computer (since macOS appeared to have flaky serial connection for some reason). For ESP32-S2 this procedure is simpler.
