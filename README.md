@@ -90,6 +90,8 @@ The only soldering necessary was for the 3 wires attached to the Feather.
 
 The only struggle I had was powering the Feather. It turned out that both +V and -V outputs from the
 power supply have to be used. The +V connected to the USB input/output and -V connected to GND.
+Thus, the -V is connected to the Wago connector together with the GND from Feather and the '-' impluse contact
+from the power meter.
 
 <img src="img/power.JPG" alt="drawing" width="400"/>
 
