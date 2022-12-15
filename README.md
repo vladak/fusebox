@@ -85,6 +85,9 @@ To get reliable pulse readings, a [pullup resistor](https://en.wikipedia.org/wik
 In order to connect all the wires and the resistor together I used the Wago connectors.
 I cut the leads to the resistor a bit so it almost completely hides inside the Wago connectors.
 
+The only struggle I had was powering the Feather. It turned out that both +V and -V outputs from the
+power supply have to be used. The +V connected to the USB input/output and -V connected to GND.
+
 ### Code
 
 The code is simple - in endless cycle it collects and sends the pulse count (and sensor data)
