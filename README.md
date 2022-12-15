@@ -102,6 +102,11 @@ And here is the final result:
 
 <img src="img/fusebox-final.JPG" alt="drawing" width="400"/>
 
+The power meter and the power supply were installed by an electrician, however
+then I needed to add a wire to -V on the power supply and one needs to be really
+careful while the fuse box is under current. Dangling wire with exposed contact
+is a no-no - just add a empty Wago connector to prevent it from touching the phase wires.
+Or shut the while fuse box altogether and grab a head lamp.
 
 ### Code
 
