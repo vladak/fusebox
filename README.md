@@ -227,3 +227,13 @@ To transfer the file to the microcontroller, the same method as in the Install s
 Adafruit has largely such a good documentation that the links are worth putting here for quick reference:
 - CircuitPython [countio](https://docs.circuitpython.org/en/latest/shared-bindings/countio/index.html)
 - [ATH20 guide](https://learn.adafruit.com/adafruit-aht20)
+
+## Future
+
+After completing the project, I found there are many sophisticated setups out there that
+allow electricity consumption monitoring for individual rooms, basically per breaker.
+These are usually done by having multiple power meters and/or dedicated gadgets that have multiple
+sensors placed on individual phase wires in the fuse box.
+
+Rether than going this way, further cluttering the fuse box, I might use electricity consumption
+readings from various smart plugs around the house that are already connected to the IoT network.
