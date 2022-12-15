@@ -69,8 +69,6 @@ called the teacher responsible for the workshop, and I had the box ready in 2 da
 To fasten the microcontroller inside the case, I used the [nylon screw and stand-off set](https://www.adafruit.com/product/3299).
 I am glad that I ordered the screw set without having a firm plan what to use it for.
 
-<img src="img/box-inside.JPG" alt="drawing" width="400"/>
-
 The nice thing about the case is that the Neopixel blinking (in blue, for half a second),
 which happens whenever a message is published to MQTT broker,
 is visible through the lid of the enclosure (also blue color) as it is a bit translucent.
@@ -81,13 +79,24 @@ The color coding I choose is based on the [STEMMA QT spec](https://learn.adafrui
 red for V+ power, black for ground. The pulse wire is blue (matching the color 
 of the box for a bonus !).
 
+<img src="img/box-inside.JPG" alt="drawing" width="400"/>
+
 To get reliable pulse readings, a [pullup resistor](https://en.wikipedia.org/wiki/Pull-up_resistor) is needed.
 In order to connect all the wires and the resistor together I used the Wago connectors.
 I cut the leads to the resistor a bit so it almost completely hides inside the Wago connectors.
 The only soldering necessary was for the 3 wires attached to the Feather.
 
+<img src="img/wago.JPG" alt="drawing" width="400"/>
+
 The only struggle I had was powering the Feather. It turned out that both +V and -V outputs from the
 power supply have to be used. The +V connected to the USB input/output and -V connected to GND.
+
+<img src="img/power.JPG" alt="drawing" width="400"/>
+
+And here is the final result:
+
+<img src="img/fusebox-final.JPG" alt="drawing" width="400"/>
+
 
 ### Code
 
