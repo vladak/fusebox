@@ -100,7 +100,7 @@ care needs to be taken not to connect USB cable while the +V is connected.
 
 This is a crappy diagram of how the wires are connected:
 
-<img src="img/diagram.svg" alt="drawing" width="400"/>
+<img src="img/diagram.jpg" alt="drawing" width="400"/>
 
 And here is the final result:
 
