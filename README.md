@@ -93,6 +93,9 @@ power supply have to be used. The +V connected to the USB input/output and -V co
 Thus, the -V is connected to the Wago connector together with the GND from Feather and the '-' impluse contact
 from the power meter.
 
+The +V connected to the USB pin has some [caveats](https://forums.adafruit.com/viewtopic.php?p=933318#p933318) -
+care needs to be taken not to connect USB cable while the +V is connected.
+
 <img src="img/power.JPG" alt="drawing" width="400"/>
 
 And here is the final result:
