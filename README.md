@@ -167,7 +167,7 @@ cache:
   # Timeout. Each received metric will be presented for this time if no update is send via MQTT.
   # Set the timeout to -1 to disable the deletion of metrics from the cache. The exporter presents the ingest timestamp
   # to prometheus.
-  timeout: 60m
+  timeout: 15m
 # This is a list of valid metrics. Only metrics listed here will be exported
 metrics:
   -
@@ -235,6 +235,11 @@ The dashboard is rather simple:
 It captures only the first day of measurement, so the per month values are not real yet.
 
 The dashboard can be downloaded from [Electricity.json](/Electricity.json).
+
+For getting the data displayed in Grafana the way I wanted, the Explore tab is immensely useful.
+In my case, the power consumption graph displayed only wide bars and I found out that
+the scaping interval has to be made smaller in order to get enough data points,
+which in turn makes finer grained resolution and thus narrower columns.
 
 ## Usage
 
