@@ -79,7 +79,8 @@ is visible through the lid of the enclosure (also blue color) as it is a bit tra
 
 The color coding I choose is based on the [STEMMA QT spec](https://learn.adafruit.com/introducing-adafruit-stemma-qt/technical-specs) -
 red for V+ power, black for ground. The pulse wire connected to GPIO pin 37 (`board.D37` in the code) is blue (matching the color 
-of the box for a bonus !).
+of the box for a bonus !). There are several [tricks](https://forums.adafruit.com/viewtopic.php?t=196848) on how to determine and maintain the mapping between pin on the board and the CircuitPython `board` attribute. One is to look into CircuitPython source code, another is to
+save the `dict(board)` to a `.txt` file on the microcontroller (or elsewhere) for easy reference.
 
 <img src="img/box-inside.JPG" alt="drawing" width="400"/>
 
