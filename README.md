@@ -91,7 +91,10 @@ The only soldering necessary was for the 3 wires attached to the Feather.
 <img src="img/wago.JPG" alt="drawing" width="400"/>
 
 The only struggle I had was powering the Feather. It turned out that both +V and -V outputs from the
-power supply have to be used. The +V connected to the USB input/output and -V connected to GND.
+power supply have to be used. 
+There is very nice tear down video of the DR-15-5 on https://www.youtube.com/watch?v=2S5OFr9VSnY , 
+which actually made me think about how to connect it properly.
+The +V is connected to the USB input/output pin and -V is connected to GND pin.
 Thus, the -V is connected to the Wago connector together with the GND from Feather and the '-' impluse contact
 from the power meter.
 
