@@ -261,6 +261,7 @@ secrets = {
     "mqtt_topic": "devices/fusebox/esp32",
     "sleep_duration": 30,
     "log_level": "INFO",
+    "log_topic": "logs/fusebox/esp32",
 }
 ```
 
