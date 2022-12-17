@@ -45,11 +45,9 @@ except ImportError:
 
 # Estimated run time in seconds with some extra room.
 # This is used to compute the watchdog timeout.
-# TODO: this depends on sleep_timeout in the configuration
 ESTIMATED_RUN_TIME = 60
 
 
-# TODO: add color
 def blink(pixel, timeout=0.5):
     """
     Blink the Neo pixel blue.
@@ -107,7 +105,6 @@ def main():
         logger.addHandler(MQTTHandler(mqtt_client, secrets["log_topic"]))
 
     while True:
-        # TODO: ideally the objects inside get_measurements() should be reused - introduce a class ?
         humidity, temperature = get_measurements(i2c)
 
         data = {}
