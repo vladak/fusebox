@@ -112,6 +112,7 @@ def main():
         if pin_counter.count < 0:
             # Resetting the counter once it wraps to negative value might lose
             # some pulses, however it is undesirable to hard code a maximum value either.
+            logger.info("Counter is negative, resetting")
             pin_counter.reset()
 
         count = pin_counter.count
