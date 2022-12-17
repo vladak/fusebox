@@ -32,6 +32,7 @@ from watchdog import WatchDogMode, WatchDogTimeout
 
 from logutil import get_log_level
 from mqtt import mqtt_client_setup
+from mqtt_handler import MQTTHandler
 from sensors import get_measurements
 
 try:
@@ -97,6 +98,13 @@ def main():
 
     logger.info(f"Attempting to connect to MQTT broker {mqtt_client.broker}")
     mqtt_client.connect()
+    if secrets["log_topic"]:
+        # Log both to the console as well as via MQTT messages.
+        # Up to now the logger was using the default (built-in) handler,
+        # now it is necessary to add the Stream handler explicitly as
+        # with a non-default handler set only the non-default handlers will be used.
+        logger.addHandler(logging.StreamHandler())
+        logger.addHandler(MQTTHandler(mqtt_client, secrets["log_topic"]))
 
     while True:
         # TODO: ideally the objects inside get_measurements() should be reused - introduce a class ?
