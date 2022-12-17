@@ -12,10 +12,12 @@ import traceback
 
 import adafruit_logging as logging
 import board
+
 # pylint: disable=import-error
 import countio
 import microcontroller
 import neopixel
+
 # pylint: disable=import-error
 import socketpool
 
@@ -105,7 +107,13 @@ def main():
         # It is assumed that the counter will wrap around as it reaches some value.
         # The data collection service (e.g. Prometheus) should be able to deal with that,
         # being aware that it is working with a counter.
-        # If the counter was reset() here, that would probably confuse the data collection service.
+        # If the counter was reset() here on every iteration, that would probably confuse
+        # the data collection service.
+        if pin_counter.count < 0:
+            # Resetting the counter once it wraps to negative value might lose
+            # some pulses, however it is undesirable to hard code a maximum value either.
+            pin_counter.reset()
+
         count = pin_counter.count
         logger.info(f"Got pulse count: {count}")
         data["pulses"] = count
