@@ -133,6 +133,12 @@ which I believe happens on ESP32 V2.
 
 Firstly, the microcontroller needs to be converted to run CircuitPython. To do that, for ESP32 V2, I chose the [command line `esptool`](https://learn.adafruit.com/circuitpython-with-esp32-quick-start/command-line-esptool) on a Linux computer (since macOS appeared to have flaky serial connection for some reason). For ESP32-S2 this procedure is simpler.
 
+Specifically, this command was used:
+```
+esptool.py --port /dev/ttyACM0 write_flash -z 0x0 \
+    ~/Downloads/adafruit-circuitpython-adafruit_feather_esp32_v2-en_US-8.0.2.bin
+```
+
 Once CicuitPython is installed, the following could be used:
 - copy `*.py` to the `CIRCUITPY` volume
 - copy all necessary libraries from Adafruit CircuitPython bundle to `CIRCUITPY/lib` directory 
