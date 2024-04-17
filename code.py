@@ -141,6 +141,8 @@ def main():
             logger.info(f"Publishing to {mqtt_topic}")
             mqtt_client.publish(mqtt_topic, json.dumps(data))
 
+        mqtt_client.loop(1)
+
         logger.info("Feeding the watchdog")
         watchdog.feed()
 
