@@ -26,6 +26,8 @@ import supervisor
 
 try:
     import wifi
+
+    IMPORT_EXCEPTION = None
 except MemoryError as e:
     # Let this fall through to main() so that appropriate reset can be performed.
     IMPORT_EXCEPTION = e
@@ -51,9 +53,6 @@ except ImportError:
 # Estimated run time in seconds with some extra room.
 # This is used to compute the watchdog timeout.
 ESTIMATED_RUN_TIME = 60
-
-# For storing import exceptions so that they can be raised from main().
-IMPORT_EXCEPTION = None
 
 
 def blink(pixel, timeout=0.5):
