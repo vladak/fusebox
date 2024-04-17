@@ -198,9 +198,6 @@ except MemoryError as e:
     # however adding that here just in case.
     hard_reset(e)
 except Exception as e:  # pylint: disable=broad-except
-    # This assumes that such exceptions are quite rare.
-    # Otherwise, this would drain the battery quickly by restarting
-    # over and over in a quick succession.
     watchdog.mode = None
     print("Code stopped by unhandled exception:")
     print(traceback.format_exception(None, e, e.__traceback__))
