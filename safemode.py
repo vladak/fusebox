@@ -41,5 +41,4 @@ if False:  # check for any safemode conditions where we shouldn't RESET
     pass
 else:
     # RESET out of safe mode
-    # pylint: disable=no-member
-    microcontroller.reset()  # or alarm.exit_and_deep_sleep()
+    microcontroller.reset()  # pylint: disable=no-member
