@@ -34,10 +34,12 @@ safemode_dict["safemode_time_ns"] = time.monotonic_ns()
 # write dict as JSON. This will overwrite any pre-existing file.
 precode_file_write("/safemode.json", json.dumps(safemode_dict))  # use storage.remount()
 
+# pylint: disable=using-constant-test
 if False:  # check for any safemode conditions where we shouldn't RESET
     # Do nothing. The safe mode reason will be printed in the console,
     # and nothing will run.
     pass
 else:
     # RESET out of safe mode
+    # pylint: disable=no-member
     microcontroller.reset()  # or alarm.exit_and_deep_sleep()
