@@ -40,7 +40,7 @@ from watchdog import WatchDogMode, WatchDogTimeout
 from logutil import get_log_level
 from mqtt import mqtt_client_setup
 from mqtt_handler import MQTTHandler
-from sensors import get_measurements
+from sensors import Sensors
 
 try:
     from secrets import secrets
@@ -93,6 +93,8 @@ def main():
     pin_counter = countio.Counter(board.D37, edge=countio.Edge.RISE)
     pixel = neopixel.NeoPixel(board.NEOPIXEL, 1)
 
+    sensors = Sensors(i2c)
+
     # Connect to Wi-Fi
     logger.info("Connecting to wifi")
     wifi.radio.connect(secrets["ssid"], secrets["password"], timeout=10)
@@ -115,7 +117,7 @@ def main():
         logger.addHandler(MQTTHandler(mqtt_client, secrets["log_topic"]))
 
     while True:
-        humidity, temperature = get_measurements(i2c)
+        humidity, temperature, _ = sensors.get_measurements()
 
         data = {}
 
