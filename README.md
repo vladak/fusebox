@@ -139,6 +139,8 @@ esptool.py --port /dev/ttyACM0 write_flash -z 0x0 \
     ~/Downloads/adafruit-circuitpython-adafruit_feather_esp32_v2-en_US-8.0.2.bin
 ```
 
+These days it can be also quite conveniently done using [WebFlasher](https://adafruit.github.io/Adafruit_WebSerial_ESPTool/) with the `.bin` file provided on https://circuitpython.org/board/adafruit_feather_esp32_v2/
+
 The web workflow for this case is actually a boon, since going into the fusebox cabinet
 in order to change the code would be undesirable and potentially dangerous.
 
