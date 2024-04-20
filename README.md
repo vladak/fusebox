@@ -131,12 +131,12 @@ which I believe happens on ESP32 V2.
 
 ## Software/firmware install
 
-Firstly, the microcontroller needs to be converted to run CircuitPython. To do that, for ESP32 V2, I chose the [command line `esptool`](https://learn.adafruit.com/circuitpython-with-esp32-quick-start/command-line-esptool) on a Linux computer (since macOS appeared to have flaky serial connection for some reason).
+Firstly, the microcontroller needs to be converted to run CircuitPython. To do that, for ESP32 V2, initially I chose the [command line `esptool`](https://learn.adafruit.com/circuitpython-with-esp32-quick-start/command-line-esptool) on a Linux computer (since macOS appeared to have flaky serial connection for some reason).
 
 Specifically, this command was used:
 ```
 esptool.py --port /dev/ttyACM0 write_flash -z 0x0 \
-    ~/Downloads/adafruit-circuitpython-adafruit_feather_esp32_v2-en_US-8.0.2.bin
+    ~/Downloads/adafruit-circuitpython-adafruit_feather_esp32_v2-en_US-x.y.z.bin
 ```
 
 These days it can be also quite conveniently done using [WebFlasher](https://adafruit.github.io/Adafruit_WebSerial_ESPTool/) with the `.bin` file provided on https://circuitpython.org/board/adafruit_feather_esp32_v2/
