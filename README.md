@@ -167,7 +167,7 @@ Then the following can be used:
 - create `secrets.py` in the root directory (using the same technique as in the previous step)
 - install necessary libraries from Adafruit CircuitPython bundle to the `lib` directory:  
   ```
-  circup --host 172.40.0.11 --password XXX install -r requirements.txt
+  circup --host 172.40.0.9 --password XXX install -r requirements.txt
   ```
 
 ## Configuration
