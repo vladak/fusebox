@@ -131,17 +131,13 @@ which I believe happens on ESP32 V2.
 
 ## Software/firmware install
 
-Firstly, the microcontroller needs to be converted to run CircuitPython. To do that, for ESP32 V2, I chose the [command line `esptool`](https://learn.adafruit.com/circuitpython-with-esp32-quick-start/command-line-esptool) on a Linux computer (since macOS appeared to have flaky serial connection for some reason). For ESP32-S2 this procedure is simpler.
+Firstly, the microcontroller needs to be converted to run CircuitPython. To do that, for ESP32 V2, I chose the [command line `esptool`](https://learn.adafruit.com/circuitpython-with-esp32-quick-start/command-line-esptool) on a Linux computer (since macOS appeared to have flaky serial connection for some reason).
 
 Specifically, this command was used:
 ```
 esptool.py --port /dev/ttyACM0 write_flash -z 0x0 \
     ~/Downloads/adafruit-circuitpython-adafruit_feather_esp32_v2-en_US-8.0.2.bin
 ```
-
-Once CicuitPython is installed, the following could be used:
-- copy `*.py` to the `CIRCUITPY` volume
-- copy all necessary libraries from Adafruit CircuitPython bundle to `CIRCUITPY/lib` directory 
 
 Since switching to ESP32 V2, web based workflow has to be used, which means the process of
 copying the Python files and Adafruit CircuitPython bundle libraries has to be done by hand,
@@ -151,6 +147,21 @@ The web workflow for this case is actually a boon, since going into the fusebox 
 in order to change the code would be undesirable and potentially dangerous.
 
 Having static IP address for the microcontroller is handy.
+
+Once CicuitPython is installed, perform the initial set up by creating the `settings.toml` file in the root directory (using `screen` when the board is connected via USB data cable).
+
+Then the following can be used:
+- copy `*.py` files to the root directory using web workflow, assumes system with `curl` installed:
+  ```
+  for f in *.py; do
+      curl -v -u :XXX -T $f -L --location-trusted http://172.40.0.9/fs/$f;
+  done
+  ```
+- create `secrets.py` in the root directory (using the same technique as in the previous step)
+- install necessary libraries from Adafruit CircuitPython bundle to the `lib` directory:  
+  ```
+  circup --host 172.40.0.11 --password XXX install -r requirements.txt
+  ```
 
 ## Configuration
 
