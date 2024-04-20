@@ -148,7 +148,16 @@ in order to change the code would be undesirable and potentially dangerous.
 
 Having static IP address for the microcontroller is handy.
 
-Once CicuitPython is installed, perform the initial set up by creating the `settings.toml` file in the root directory (using `screen` when the board is connected via USB data cable).
+Once CicuitPython is installed, perform the initial set up by [creating the `settings.toml` file](https://learn.adafruit.com/circuitpython-with-esp32-quick-start/setting-up-web-workflow
+) in the root directory (using `screen` when the board is connected via USB data cable):
+```
+f = open('settings.toml', 'w')
+f.write('CIRCUITPY_WIFI_SSID = "wifissid"\n')
+f.write('CIRCUITPY_WIFI_PASSWORD = "wifipassword"\n')
+f.write('CIRCUITPY_WEB_API_PASSWORD = "XXX"\n')
+f.close()
+```
+and restart the microcontroller.
 
 Then the following can be used:
 - copy `*.py` files to the root directory using web workflow, assumes system with `curl` installed:
