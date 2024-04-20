@@ -139,10 +139,6 @@ esptool.py --port /dev/ttyACM0 write_flash -z 0x0 \
     ~/Downloads/adafruit-circuitpython-adafruit_feather_esp32_v2-en_US-8.0.2.bin
 ```
 
-Since switching to ESP32 V2, web based workflow has to be used, which means the process of
-copying the Python files and Adafruit CircuitPython bundle libraries has to be done by hand,
-using the web uploader, [until `circup` supports the web based workflow](https://github.com/adafruit/circup/issues/156).
-
 The web workflow for this case is actually a boon, since going into the fusebox cabinet
 in order to change the code would be undesirable and potentially dangerous.
 
