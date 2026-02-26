@@ -162,10 +162,10 @@ def fill_data_dict(data, humidity, temperature):
 
     logger = logging.getLogger(__name__)
 
-    if temperature:
+    if temperature is not None:
         logger.info(f"Temperature: {temperature:.1f} C")
         data["temperature"] = f"{temperature:.1f}"
-    if humidity:
+    if humidity is not None:
         logger.info(f"Humidity: {humidity:.1f} %%")
         data["humidity"] = f"{humidity:.1f}"
 
